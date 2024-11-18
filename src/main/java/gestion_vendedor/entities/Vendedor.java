@@ -1,9 +1,14 @@
 package gestion_vendedor.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "Vendedor")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Vendedor {
 
     @Id
@@ -26,58 +31,5 @@ public class Vendedor {
     @Enumerated(EnumType.STRING)
     @Column(name = "estado", length = 1)
     private Estado estado;
-
-    // Getter y Setter para 'nombre'
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    // Getter y Setter para 'apellido'
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    // Getter y Setter para 'correo'
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    // Getter y Setter para 'celular'
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
-    // Getter y Setter para 'estado'
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    // Getter y Setter para 'id'
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
+
